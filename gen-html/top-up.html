@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AEON BETA - Top Up</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-left">
+            <button class="tab-button">Buy Tickets</button>
+            <span class="date-display">16 Jul 2025</span>
+            <button class="tab-button">F&B/Souvenirs</button>
+        </div>
+        <div class="header-right">
+            <div class="balance-info">
+                <span class="balance-label">Cash:</span>
+                <span class="balance-value">1.000.000 đ</span>
+            </div>
+            <div class="balance-info">
+                <span class="balance-label">Credit/Debit:</span>
+                <span class="balance-value">0 đ</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="top-up-container">
+        <section class="top-up-card">
+            <h1 class="top-up-title caps-title">TOP UP</h1>
+            
+            <!-- Card Info -->
+            <div class="card-info-summary">
+                <div class="info-row">
+                    <span class="info-label">Virtual Card ID:</span>
+                    <span class="info-value">686899</span>
+                </div>
+                <div class="info-row">
+                    <span class="info-label">Card balance:</span>
+                    <span class="info-value">0 VND</span>
+                </div>
+            </div>
+
+            <!-- Top Up Amount Section -->
+            <div class="top-up-section">
+                <h2 class="section-label-bold">TOP UP AMOUNT:</h2>
+                <div class="amount-input-container">
+                    <input type="number" class="amount-input" placeholder="Enter top up amount">
+                    <div class="preset-grid">
+                        <button class="preset-button">500.000</button>
+                        <button class="preset-button">One million</button>
+                        <button class="preset-button">Two millions</button>
+                        <button class="preset-button">Five millions</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Payment Method Section -->
+            <div class="top-up-section">
+                <h2 class="section-label-bold">CHOOSE TOP UP METHOD:</h2>
+                <div class="method-grid">
+                    <button class="method-button">
+                        <span class="method-label">CASH</span>
+                    </button>
+                    <button class="method-button">
+                        <span class="method-label">CREDIT/<br>DEBIT</span>
+                    </button>
+                    <button class="method-button">
+                        <span class="method-label">QR CODE</span>
+                    </button>
+                    <button class="method-button active-method pink-theme">
+                        <span class="method-label">GIFT CARD</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Footer Actions -->
+            <div class="top-up-footer">
+                <button class="btn-cancel">Cancel</button>
+                <button class="btn-confirm primary-black">Confirm</button>
+            </div>
+        </section>
+    </main>
+
+    <!-- Bottom Navigation -->
+    <nav class="bottom-nav">
+        <button class="nav-item">
+            <div class="nav-icon"></div>
+            <span class="nav-label">Home</span>
+        </button>
+        <button class="nav-item nav-active">
+            <div class="nav-icon"></div>
+            <span class="nav-label">Settings</span>
+        </button>
+        <button class="nav-item">
+            <div class="nav-icon"></div>
+            <span class="nav-label">Logout</span>
+        </button>
+    </nav>
+</body>
+</html>

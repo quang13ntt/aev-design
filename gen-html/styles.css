@@ -663,12 +663,12 @@ button {
     border: 4px solid var(--black-900) !important;
 }
 
-.pink-theme {
-    background: var(--pink);
+.white-theme {
+    background: var(--white);
 }
 
-.pink-theme:hover {
-    background: var(--pink);
+.white-theme:hover {
+    background: var(--white);
     opacity: 0.9;
 }
 

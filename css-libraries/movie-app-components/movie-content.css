@@ -1,0 +1,156 @@
+/* Movie Content Components */
+
+/* Film description container */
+.film-description {
+    /* Auto layout */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px;
+    gap: 32px;
+    width: 375px;
+    height: 714px;
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 0;
+}
+
+/* Carousel container */
+.carousel {
+    /* Auto layout */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px;
+    gap: 2px;
+    width: 375px;
+    height: 275px;
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 0;
+}
+
+/* Main thumbnail */
+.main-thumbnail {
+    width: 375px;
+    height: 213px;
+    overflow-x: scroll;
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 0;
+}
+
+/* Carousel images container */
+.carousel-images {
+    /* Auto layout */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    isolation: isolate;
+    position: absolute;
+    width: 1875px;
+    height: 213px;
+    left: 0px;
+    top: 0px;
+}
+
+/* Carousel image */
+.carousel-image {
+    width: 375px;
+    height: 213px;
+    background: url(image.png);
+    /* Inside auto layout */
+    flex: none;
+    flex-grow: 0;
+}
+
+.carousel-image:nth-child(1) {
+    z-index: 0;
+}
+
+.carousel-image:nth-child(2) {
+    background: url(image), url(image.png);
+    z-index: 1;
+}
+
+.carousel-image:nth-child(3) {
+    background: url(image), url(image.png);
+    z-index: 2;
+}
+
+.carousel-image:nth-child(4) {
+    background: url(image), url(image.png);
+    z-index: 3;
+}
+
+.carousel-image:nth-child(5) {
+    z-index: 5;
+}
+
+/* Thumbnail navigation */
+.thumb {
+    /* Auto layout */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 8px;
+    width: 375px;
+    height: 60px;
+    /* Inside auto layout */
+    flex: none;
+    order: 1;
+    align-self: stretch;
+    flex-grow: 0;
+}
+
+.thumbs-container {
+    margin: 0 auto;
+    width: 290px;
+    height: 60px;
+    overflow-x: scroll;
+    /* Inside auto layout */
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+
+.thumbs {
+    /* Auto layout */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    position: absolute;
+    width: 535px;
+    height: 60px;
+    left: 0px;
+    top: 0px;
+    overflow-x: scroll;
+}
+
+/* Movie thumbnail */
+.movie-thumb {
+    width: 107px;
+    height: 60px;
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+.movie-thumb .image {
+    position: absolute;
+    width: 107px;
+    height: 60px;
+    left: 0px;
+    top: 0px;
+    background: url(image.png);
+}

@@ -1,0 +1,145 @@
+/* Movie App Typography System */
+
+/* ===========================================
+   DESIGN SYSTEM TYPOGRAPHY SCALE
+   Using ABC Diatype font family
+   =========================================== */
+
+/* SP/H4: Bold - Used for page numbers and important headings */
+.sp-h4-bold {
+    font-family: 'ABC Diatype';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    /* 120% line height for optimal readability */
+    letter-spacing: -0.015em;
+    color: #0D0D0D;
+    /* Allow natural text flow */
+    margin: 0;
+    padding: 0;
+}
+
+/* SP/Body: Bold - Used for tab titles and location text */
+.sp-body-bold {
+    font-family: 'ABC Diatype';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 18px;
+    /* 120% line height for optimal readability */
+    color: #0D0D0D;
+    /* Allow natural text flow */
+    margin: 0;
+    padding: 0;
+}
+
+.sp-body-bold.center {
+    text-align: center;
+}
+
+/* SP/Caption 2: Regular - Used for navigation labels */
+.sp-caption2-regular {
+    font-family: 'ABC Diatype';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 14px;
+    /* 130% line height for small text readability */
+    text-align: center;
+    color: #0D0D0D;
+    /* Allow natural text flow */
+    margin: 0;
+    padding: 0;
+}
+
+/* SP/Body: Regular - Used for general body text */
+.sp-body-regular {
+    font-family: 'ABC Diatype';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 18px;
+    /* 120% line height for optimal readability */
+    color: #0D0D0D;
+    /* Allow natural text flow */
+    margin: 0;
+    padding: 0;
+}
+
+/* Age rating text */
+.age-rating-text {
+    /* SP/H4: Bold */
+    font-family: 'ABC Diatype';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    /* 120% line height for optimal readability */
+    text-align: center;
+    letter-spacing: -0.015em;
+    color: #0D0D0D;
+    /* Allow natural text flow */
+    margin: 0;
+    padding: 0;
+}
+
+/* Title text */
+.title-text {
+    /* SP/H4: Bold */
+    font-family: 'ABC Diatype';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    /* 120% line height for optimal readability */
+    text-align: center;
+    letter-spacing: -0.015em;
+    color: #0D0D0D;
+    /* Allow natural text flow */
+    margin: 0;
+    padding: 0;
+}
+
+/* Subtitle text */
+.subtitle-text {
+    font-family: 'ABC Diatype';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 17px;
+    /* 130% line height for optimal readability */
+    color: #0D0D0D;
+    /* Allow natural text flow */
+    margin: 0;
+    padding: 0;
+}
+
+/* Showtime text */
+.showtime-text {
+    /* SP/Body: Bold */
+    font-family: 'ABC Diatype';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 18px;
+    /* 120% line height for optimal readability */
+    color: #0D0D0D;
+    /* Allow natural text flow */
+    margin: 0;
+    padding: 0;
+}
+
+/* Subtitled text */
+.subtitled-text {
+    font-family: 'ABC Diatype';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 17px;
+    /* 130% line height for optimal readability */
+    color: #0D0D0D;
+    /* Allow natural text flow */
+    margin: 0;
+    padding: 0;
+}

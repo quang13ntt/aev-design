@@ -1,0 +1,160 @@
+/* Navigation Button Styles */
+
+/* prev button */
+.prev-button {
+    /* Auto layout */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    gap: 10px;
+    width: 40px;
+    height: 40px;
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+.prev-button .icon-arrow-left {
+    width: 24px;
+    height: 24px;
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+.prev-button .clip-path-group {
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: 0%;
+}
+
+.prev-button .clippath {
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: 0%;
+}
+
+.prev-button .vector {
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: 0%;
+    background: #000000;
+}
+
+.prev-button .group {
+    position: absolute;
+    left: 16.67%;
+    right: 12.5%;
+    top: 17.97%;
+    bottom: 17.95%;
+}
+
+.prev-button .vector:nth-child(2) {
+    position: absolute;
+    left: 16.67%;
+    right: 12.5%;
+    top: 50%;
+    bottom: 50%;
+    /* Black/100 */
+    border: 2px solid #E3E3E3;
+}
+
+.prev-button .vector:nth-child(3) {
+    position: absolute;
+    left: 16.67%;
+    right: 51.29%;
+    top: 17.97%;
+    bottom: 17.95%;
+    /* Black/100 */
+    border: 2px solid #E3E3E3;
+}
+
+/* next button */
+.next-button {
+    /* Auto layout */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    gap: 10px;
+    width: 40px;
+    height: 40px;
+    /* Inside auto layout */
+    flex: none;
+    order: 2;
+    flex-grow: 0;
+}
+
+.next-button .icon-arrow-right {
+    width: 24px;
+    height: 24px;
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+.next-button .clip-path-group {
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: 0%;
+}
+
+.next-button .clippath {
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: 0%;
+}
+
+.next-button .vector {
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: 0%;
+    background: #000000;
+    transform: rotate(-180deg);
+}
+
+.next-button .group {
+    position: absolute;
+    left: 12.5%;
+    right: 16.67%;
+    top: 17.97%;
+    bottom: 17.95%;
+}
+
+.next-button .vector:nth-child(2) {
+    position: absolute;
+    left: 12.5%;
+    right: 16.67%;
+    top: 50%;
+    bottom: 50%;
+    /* Black/900 Main color */
+    border: 2px solid #0D0D0D;
+}
+
+.next-button .vector:nth-child(3) {
+    position: absolute;
+    left: 51.3%;
+    right: 16.66%;
+    top: 17.97%;
+    bottom: 17.95%;
+    /* Black/900 Main color */
+    border: 2px solid #0D0D0D;
+}

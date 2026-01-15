@@ -1,0 +1,120 @@
+/* Promotional Elements */
+
+/* HAPPY TUE */
+.happy-tue {
+    /* Auto layout */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 3px 3px 5px;
+    gap: 10px;
+    /* Allow natural sizing */
+    width: fit-content;
+    height: auto;
+    border-radius: 4px;
+    /* Inside auto layout */
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+
+.happy-tue .day-label {
+    /* ABC Diatype Bold */
+    font-family: 'ABC Diatype';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 11px;
+    line-height: 14px;
+    /* Better line-height for readability */
+    text-align: right;
+    /* Black/900 */
+    color: #0D0D0D;
+    /* Allow natural text sizing */
+    width: auto;
+    height: auto;
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+/* Happy Day */
+.happy-day {
+    /* Auto layout */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 4px;
+    gap: 10px;
+    /* Lemon Support color */
+    background: #CEFA69;
+    border-radius: 6px;
+    /* Allow natural sizing */
+    width: fit-content;
+    height: auto;
+    /* Inside auto layout */
+    flex: none;
+    order: 1;
+    flex-grow: 1;
+}
+
+.happy-day .label {
+    /* ABC Diatype Bold */
+    font-family: 'ABC Diatype';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 10px;
+    line-height: 14px;
+    /* or 140% */
+    /* Black/900 */
+    color: #0D0D0D;
+    /* Allow natural text sizing */
+    width: auto;
+    height: auto;
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+/* Happy morning */
+.happy-morning {
+    /* Auto layout */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 4px;
+    gap: 10px;
+    /* Lemon Support color */
+    background: #CEFA69;
+    border-radius: 6px;
+    /* Allow natural sizing */
+    width: fit-content;
+    height: auto;
+    /* Inside auto layout */
+    flex: none;
+    order: 1;
+    flex-grow: 1;
+}
+
+.happy-morning .label {
+    /* ABC Diatype Bold */
+    font-family: 'ABC Diatype';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 10px;
+    line-height: 14px;
+    /* or 140% */
+    /* Black/900 */
+    color: #0D0D0D;
+    /* Allow natural text sizing */
+    width: auto;
+    height: auto;
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}

@@ -1,0 +1,175 @@
+/* Movie App Icons */
+
+/* Icons/ios_share */
+.icon-ios-share {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    left: 8px;
+    top: 8px;
+}
+
+/* Icons/stylus */
+.icon-stylus {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    left: 8px;
+    top: 8px;
+}
+
+/* Icons/more_vert */
+.icon-more-vert {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    left: 8px;
+    top: 8px;
+}
+
+/* icon/play */
+.icon-play {
+    position: absolute;
+    width: 64px;
+    height: 64px;
+    left: 1283px;
+    top: 74px;
+    /* Inside auto layout */
+    flex: none;
+    order: 4;
+    flex-grow: 0;
+    z-index: 4;
+}
+
+.icon-play.small {
+    width: 32px;
+    height: 32px;
+    left: 37px;
+    top: 14px;
+}
+
+/* icon/chevron-left/24px */
+.icon-chevron-left {
+    margin: 0 auto;
+    width: 24px;
+    height: 24px;
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+.icon-chevron-left .clip-path-group {
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: 0%;
+}
+
+.icon-chevron-left .clippath {
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: 0%;
+}
+
+.icon-chevron-left .vector {
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: 0%;
+    background: #000000;
+    transform: rotate(-180deg);
+}
+
+.icon-chevron-left .group {
+    position: absolute;
+    left: 33.5%;
+    right: 33.5%;
+    top: 16.99%;
+    bottom: 17.01%;
+}
+
+.icon-chevron-left .vector:nth-child(2) {
+    position: absolute;
+    left: 33.5%;
+    right: 33.5%;
+    top: 16.99%;
+    bottom: 17.01%;
+    border: 2px solid #000000;
+}
+
+/* icon/chevron-right/24px */
+.icon-chevron-right {
+    width: 24px;
+    height: 24px;
+    /* Inside auto layout */
+    flex: none;
+    order: 2;
+    flex-grow: 0;
+}
+
+.icon-chevron-right .clip-path-group {
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: 0%;
+}
+
+.icon-chevron-right .clippath {
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: 0%;
+}
+
+.icon-chevron-right .vector {
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: 0%;
+    background: #000000;
+}
+
+.icon-chevron-right .group {
+    position: absolute;
+    left: 25%;
+    right: 25%;
+    top: 37.5%;
+    bottom: 37.5%;
+}
+
+.icon-chevron-right .vector:nth-child(2) {
+    position: absolute;
+    left: 25%;
+    right: 25%;
+    top: 37.5%;
+    bottom: 37.5%;
+    background: #0D0D0D;
+}
+
+/* icon/question/16px */
+.icon-question {
+    width: 16px;
+    height: 16px;
+    /* Inside auto layout */
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+
+/* icon/dropdown/fill */
+.icon-dropdown-fill {
+    width: 16px;
+    height: 16px;
+    /* Inside auto layout */
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}

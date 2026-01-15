@@ -1,0 +1,180 @@
+/* Navigation Elements */
+
+/* Showtime container */
+.showtime-section {
+    /* Auto layout */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 40px;
+    /* Allow flexible sizing */
+    width: 100%;
+    max-width: 343px;
+    height: auto;
+    /* Inside auto layout */
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+
+/* Subtitled section */
+.subtitled-section {
+    /* Auto layout */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 16px;
+    /* Allow flexible sizing */
+    width: 100%;
+    max-width: 343px;
+    height: auto;
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 0;
+}
+
+/* Subtitled headline */
+.subtitled-headline {
+    /* SP/Body: Bold */
+    font-family: 'ABC Diatype';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 18px;
+    /* or 120% */
+    /* Black/900 */
+    color: #0D0D0D;
+    /* Allow natural text sizing */
+    width: 100%;
+    height: auto;
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 0;
+}
+
+/* Showtime frame */
+.showtime-frame {
+    /* Auto layout */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 14px;
+    /* Allow flexible sizing */
+    width: 100%;
+    max-width: 343px;
+    height: auto;
+    /* Inside auto layout */
+    flex: none;
+    order: 1;
+    align-self: stretch;
+    flex-grow: 0;
+}
+
+/* Showtime item */
+.showtime-item {
+    /* Auto layout */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    gap: 8px;
+    /* Allow flexible sizing */
+    width: 100%;
+    max-width: 343px;
+    height: auto;
+    min-height: 75px;
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 0;
+}
+
+.showtime-item:nth-child(2) {
+    /* Inside auto layout */
+    flex: none;
+    order: 1;
+    align-self: stretch;
+    flex-grow: 0;
+}
+
+.showtime-item:nth-child(3) {
+    /* Inside auto layout */
+    flex: none;
+    order: 2;
+    align-self: stretch;
+    flex-grow: 0;
+}
+
+/* Showtime type container */
+.showtime-type {
+    /* Auto layout */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 14px;
+    /* Allow flexible sizing */
+    width: 100%;
+    max-width: 167.5px;
+    height: auto;
+    min-height: 75px;
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+.showtime-type:nth-child(2) {
+    /* Inside auto layout */
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+
+/* Showtime header */
+.showtime-header {
+    /* Auto layout */
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0px;
+    /* Allow flexible sizing */
+    width: 100%;
+    max-width: 167.5px;
+    height: auto;
+    min-height: 20px;
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 0;
+}
+
+/* Theatre selector text */
+.theatre-selector-text {
+    /* SP/Body: Bold */
+    font-family: 'ABC Diatype';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 18px;
+    /* or 120% */
+    text-align: center;
+    /* Black/900 */
+    color: #0D0D0D;
+    /* Allow natural text sizing */
+    width: auto;
+    height: auto;
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 1;
+}

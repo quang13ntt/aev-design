@@ -1,0 +1,244 @@
+/* Button State Styles */
+
+/* state=disabled */
+.paging-item.disabled {
+    box-sizing: border-box;
+    /* Auto layout */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 8px;
+    isolation: isolate;
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    left: 130px;
+    top: 20px;
+}
+
+.paging-item.disabled .input-value {
+    width: 24px;
+    height: 24px;
+    /* SP/H4: Bold */
+    font-family: 'ABC Diatype';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    /* identical to box height, or 120% */
+    /* leading-trim and text-edge are draft CSS properties.
+     Read more: https://drafts.csswg.org/css-inline-3/#leading-trim
+  */
+    leading-trim: both;
+    text-edge: cap;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: -0.015em;
+    /* Black/200 */
+    color: #CBCBCB;
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 1;
+    z-index: 1;
+}
+
+.paging-item.disabled .cursor {
+    /* Auto layout */
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: flex-start;
+    padding: 0px;
+    position: absolute;
+    display: none;
+    width: 1px;
+    height: 24px;
+    left: 8px;
+    top: 8px;
+    /* Inside auto layout */
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    z-index: 0;
+}
+
+/* state=hidden */
+.paging-item.hidden {
+    /* Auto layout */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 8px;
+    isolation: isolate;
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    left: 184px;
+    top: 20px;
+}
+
+.paging-item.hidden .input-value {
+    width: 12.77px;
+    height: 2.98px;
+    /* Black/900 Main color */
+    background: #0D0D0D;
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    z-index: 1;
+}
+
+.paging-item.hidden .cursor {
+    /* Auto layout */
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: flex-start;
+    padding: 0px;
+    position: absolute;
+    display: none;
+    width: 1px;
+    height: 24px;
+    left: 8px;
+    top: 8px;
+    /* Inside auto layout */
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    z-index: 0;
+}
+
+/* state=active */
+.paging-item.active {
+    /* Auto layout */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 8px;
+    isolation: isolate;
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    left: 74px;
+    top: 20px;
+    /* Black/900 Main color */
+    border: 2px solid #0D0D0D;
+}
+
+.paging-item.active .input-value {
+    width: 24px;
+    height: 24px;
+    /* SP/H4: Bold */
+    font-family: 'ABC Diatype';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    /* identical to box height, or 120% */
+    /* leading-trim and text-edge are draft CSS properties.
+     Read more: https://drafts.csswg.org/css-inline-3/#leading-trim
+  */
+    leading-trim: both;
+    text-edge: cap;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: -0.015em;
+    /* Black/900 */
+    color: #0D0D0D;
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 1;
+    z-index: 1;
+}
+
+.paging-item.active .cursor {
+    /* Auto layout */
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: flex-start;
+    padding: 0px;
+    position: absolute;
+    display: none;
+    width: 1px;
+    height: 24px;
+    left: 8px;
+    top: 8px;
+    /* Inside auto layout */
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    z-index: 0;
+}
+
+/* state=default */
+.paging-item.default {
+    /* Auto layout */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 8px;
+    isolation: isolate;
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    left: 20px;
+    top: 20px;
+}
+
+.paging-item.default .input-value {
+    width: 24px;
+    height: 24px;
+    /* SP/H4: Bold */
+    font-family: 'ABC Diatype';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    /* identical to box height, or 120% */
+    /* leading-trim and text-edge are draft CSS properties.
+     Read more: https://drafts.csswg.org/css-inline-3/#leading-trim
+  */
+    leading-trim: both;
+    text-edge: cap;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: -0.015em;
+    /* Black/900 */
+    color: #0D0D0D;
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 1;
+    z-index: 1;
+}
+
+.paging-item.default .cursor {
+    /* Auto layout */
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: flex-start;
+    padding: 0px;
+    position: absolute;
+    display: none;
+    width: 1px;
+    height: 24px;
+    left: 8px;
+    top: 8px;
+    /* Inside auto layout */
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    z-index: 0;
+}

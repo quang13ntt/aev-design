@@ -1,0 +1,46 @@
+/* Pagination Layout States */
+
+/* state=begin */
+.pagination-layout.begin {
+    /* Auto layout */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    gap: 8px;
+    position: absolute;
+    width: 328px;
+    height: 40px;
+    left: calc(50% - 328px/2);
+    top: 20px;
+}
+
+/* state=middle */
+.pagination-layout.middle {
+    /* Auto layout */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    gap: 8px;
+    position: absolute;
+    width: 328px;
+    height: 40px;
+    left: calc(50% - 328px/2);
+    top: 99px;
+}
+
+/* state=end */
+.pagination-layout.end {
+    /* Auto layout */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    gap: 8px;
+    position: absolute;
+    width: 328px;
+    height: 40px;
+    left: calc(50% - 328px/2);
+    top: 178px;
+}

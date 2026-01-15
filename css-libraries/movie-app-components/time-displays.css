@@ -1,0 +1,194 @@
+/* Time Displays and Availability */
+
+/* Time container */
+.time-container {
+    /* Auto layout */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 0px;
+    gap: 16px;
+    /* Allow flexible sizing */
+    width: 100%;
+    max-width: 167.5px;
+    height: auto;
+    min-height: 37px;
+    /* Inside auto layout */
+    flex: none;
+    order: 1;
+    align-self: stretch;
+    flex-grow: 0;
+}
+
+.time-container.narrow {
+    max-width: 103.5px;
+}
+
+/* Time display */
+.time-display {
+    /* Auto layout */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 12px;
+    margin: 0 auto;
+    /* Allow flexible sizing */
+    width: 100%;
+    max-width: 105.5px;
+    height: auto;
+    min-height: 37px;
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+.time-display.narrow {
+    max-width: 103.5px;
+}
+
+/* Time row */
+.time-row {
+    /* Auto layout */
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    padding: 0px;
+    gap: 4px;
+    /* Allow flexible sizing */
+    width: 100%;
+    max-width: 105.5px;
+    height: auto;
+    min-height: 17px;
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 0;
+}
+
+.time-row.narrow {
+    max-width: 103.5px;
+}
+
+/* Main time */
+.main-time {
+    /* SP/H3: Bold */
+    font-family: 'ABC Diatype';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29px;
+    /* or 120% */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    letter-spacing: -0.015em;
+    /* Black/900 */
+    color: #0D0D0D;
+    /* Allow natural text sizing */
+    width: auto;
+    height: auto;
+    min-width: 65px;
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+.main-time.narrow {
+    min-width: 60px;
+}
+
+/* Duration indicator */
+.duration-indicator {
+    /* Auto layout */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    gap: 4px;
+    /* Allow flexible sizing */
+    width: auto;
+    height: auto;
+    min-width: 36.5px;
+    min-height: 8px;
+    /* Inside auto layout */
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+
+.duration-indicator.narrow {
+    min-width: 39.5px;
+}
+
+/* Duration line */
+.duration-line {
+    /* Visual separator line */
+    width: 5.5px;
+    height: 1.5px;
+    background: #000000;
+    border-radius: 1px;
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+/* End time */
+.end-time {
+    /* ABC Diatype Bold */
+    font-family: 'ABC Diatype';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 16px;
+    /* or 130% */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    /* Black/900 */
+    color: #0D0D0D;
+    /* Allow natural text sizing */
+    width: auto;
+    height: auto;
+    min-width: 27px;
+    /* Inside auto layout */
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+
+.end-time.narrow {
+    min-width: 30px;
+}
+
+/* Seats available */
+.seats-available {
+    /* SP/Caption 2: Regular */
+    font-family: 'ABC Diatype';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 14px;
+    /* or 130% */
+    /* Black/900 */
+    color: #0D0D0D;
+    /* Allow natural text sizing */
+    width: 100%;
+    height: auto;
+    /* Inside auto layout */
+    flex: none;
+    order: 1;
+    align-self: stretch;
+    flex-grow: 0;
+}
+
+.seats-available.narrow {
+    /* Same responsive behavior */
+}

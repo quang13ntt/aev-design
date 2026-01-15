@@ -1,0 +1,89 @@
+/* AEV Movie App Design System */
+/* Main CSS file for movie booking application components */
+
+/* Import all component stylesheets */
+@import url('layout-containers.css');
+@import url('icons.css');
+@import url('movie-content.css');
+@import url('movie-details.css');
+@import url('showtime-booking.css');
+@import url('navigation-elements.css');
+@import url('promotional-elements.css');
+@import url('screen-types.css');
+@import url('time-displays.css');
+@import url('status-indicators.css');
+@import url('typography.css');
+@import url('footer-tabbar.css');
+
+/* Global styles and variables */
+:root {
+    /* Color Palette */
+    --black-900: #0D0D0D;
+    /* Main text color */
+    --black-100: #E3E3E3;
+    /* Border color */
+    --white: #FFFFFF;
+    /* Primary background */
+    --white-smoke: #F2F2F2;
+    /* Secondary background */
+    --purple-support: #707EFA;
+    /* Accent color */
+
+    /* Typography */
+    --font-family-primary: 'ABC Diatype', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+    /* Spacing */
+    --spacing-xs: 8px;
+    --spacing-sm: 16px;
+    --spacing-md: 32px;
+    --spacing-lg: 40px;
+    --spacing-xl: 48px;
+}
+
+/* Global typography base */
+* {
+    font-family: var(--font-family-primary);
+    box-sizing: border-box;
+}
+
+/* Utility classes */
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.bg-white {
+    background: var(--white);
+}
+
+.bg-white-smoke {
+    background: var(--white-smoke);
+}
+
+.text-black {
+    color: var(--black-900);
+}
+
+.border-black {
+    border: 1px solid var(--black-100);
+}
+
+/* Component overview:
+ * - layout-containers.css: Main app structure and containers
+ * - icons.css: All icon styles (play, chevron, share, etc.)
+ * - movie-content.css: Carousel, posters, thumbnails, film descriptions
+ * - showtime-booking.css: Location selector, date picker, tabs
+ * - footer-tabbar.css: Bottom navigation and home indicator
+ * - typography.css: Text styles and font definitions
+ */

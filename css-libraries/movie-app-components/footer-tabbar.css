@@ -1,0 +1,159 @@
+/* Footer and Tab Bar Components */
+
+/* Navigation container */
+.navigation-container {
+    /* Auto layout */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 0px;
+    gap: 0px;
+    position: absolute;
+    width: 375px;
+    height: 98px;
+    left: 0px;
+    top: 2747px;
+    /* White */
+    background: #FFFFFF;
+    /* Inside auto layout */
+    flex: none;
+    order: 3;
+    align-self: stretch;
+    flex-grow: 0;
+}
+
+/* Navigation item */
+.navigation-item {
+    /* Auto layout */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    gap: 6px;
+    width: 75.05px;
+    height: 64px;
+    /* White */
+    background: #FFFFFF;
+    /* Inside auto layout */
+    flex: none;
+    flex-grow: 0;
+}
+
+.navigation-item.home {
+    order: 0;
+}
+
+.navigation-item.search {
+    order: 1;
+}
+
+.navigation-item.tickets {
+    order: 2;
+}
+
+.navigation-item.profile {
+    order: 3;
+}
+
+.navigation-item.my-order {
+    order: 4;
+}
+
+/* Navigation icons */
+.nav-icon {
+    width: 24px;
+    height: 24px;
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+.nav-icon .vector {
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: 0%;
+    background: #000000;
+}
+
+/* Navigation label */
+.nav-label {
+    /* Auto layout */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* SP/Caption 2: Regular */
+    font-family: 'ABC Diatype';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 14px;
+    /* or 130% */
+    text-align: center;
+    /* Black/900 */
+    color: #0D0D0D;
+    /* Inside auto layout */
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    /* Remove fixed dimensions to allow natural text sizing */
+    min-width: 0;
+    white-space: nowrap;
+}
+
+/* Tab Bar */
+.tab-bar {
+    /* Auto layout */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px;
+    width: 375.25px;
+    height: 34px;
+    background: #FFFFFF;
+    backdrop-filter: blur(10px);
+    /* Note: backdrop-filter has minimal browser support */
+    /* Inside auto layout */
+    flex: none;
+    order: 1;
+    align-self: stretch;
+    flex-grow: 0;
+}
+
+/* Tabs container */
+.tabs {
+    display: none;
+    width: 390px;
+    height: 49px;
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 0;
+}
+
+/* Home Indicator */
+.home-indicator {
+    width: 375.25px;
+    height: 34px;
+    /* Inside auto layout */
+    flex: none;
+    order: 1;
+    align-self: stretch;
+    flex-grow: 0;
+}
+
+.home-indicator .indicator {
+    position: absolute;
+    width: 134px;
+    height: 5px;
+    left: calc(50% - 134px/2 + 0.38px);
+    bottom: 8px;
+    /* Label Color/Light/Primary */
+    background: #000000;
+    border-radius: 100px;
+}

@@ -1,0 +1,271 @@
+/* Showtime and Booking Components */
+
+/* Showtime container */
+.showtime-container {
+    /* Auto layout */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px;
+    gap: 48px;
+    /* Allow flexible sizing */
+    width: 100%;
+    max-width: 375px;
+    height: auto;
+    /* Inside auto layout */
+    flex: none;
+    order: 2;
+    align-self: stretch;
+    flex-grow: 0;
+}
+
+/* Location selector container */
+.location-container {
+    /* Auto layout */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px;
+    gap: 32px;
+    /* Allow flexible sizing */
+    width: 100%;
+    max-width: 375px;
+    height: auto;
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 0;
+}
+
+/* Location selector */
+.location-selector {
+    /* Auto layout */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px;
+    /* White smoke Main color */
+    background: #F2F2F2;
+    border-radius: 8px;
+    /* Allow flexible sizing */
+    width: 100%;
+    max-width: 295px;
+    height: auto;
+    min-height: 56px;
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+.location-selector .location {
+    /* Auto layout */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0px 10px 16px;
+    gap: 10px;
+    margin: 0 auto;
+    /* Allow flexible sizing */
+    width: auto;
+    height: auto;
+    min-height: 56px;
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 1;
+}
+
+.location-selector .theatre-text {
+    /* SP/Body: Bold */
+    font-family: 'ABC Diatype';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 18px;
+    /* or 120% */
+    text-align: center;
+    /* Black/900 */
+    color: #0D0D0D;
+    /* Allow natural text sizing */
+    width: auto;
+    height: auto;
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 1;
+}
+
+.location-selector .icon-container {
+    /* Auto layout */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 16px 16px 16px 0px;
+    gap: 10px;
+    margin: 0 auto;
+    /* Allow flexible sizing */
+    width: auto;
+    height: auto;
+    min-width: 40px;
+    min-height: 56px;
+    /* Inside auto layout */
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+
+/* Showing now + date picker */
+.showing-now-container {
+    /* Auto layout */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px;
+    gap: 40px;
+    /* Allow flexible sizing */
+    width: 100%;
+    max-width: 375px;
+    height: auto;
+    /* Inside auto layout */
+    flex: none;
+    order: 1;
+    align-self: stretch;
+    flex-grow: 0;
+}
+
+/* Date picker frame */
+.date-picker-frame {
+    /* Auto layout */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-end;
+    padding: 0px;
+    gap: 1px;
+    display: none;
+    /* Allow flexible sizing */
+    width: 100%;
+    max-width: 375px;
+    height: auto;
+    min-height: 54px;
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 0;
+}
+
+/* Tab component */
+.tab {
+    /* Auto layout */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    /* Allow flexible sizing */
+    width: 100%;
+    max-width: 187px;
+    height: auto;
+    min-height: 54px;
+    /* Inside auto layout */
+    flex: none;
+    flex-grow: 1;
+}
+
+.tab .title {
+    /* Auto layout */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 12px 18px;
+    gap: 10px;
+    /* White */
+    background: #FFFFFF;
+    border-radius: 8px 8px 0 0;
+    /* Allow flexible sizing */
+    width: 100%;
+    max-width: 187px;
+    height: auto;
+    min-height: 54px;
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 1;
+}
+
+.tab .title-text {
+    /* Auto layout */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    gap: 8px;
+    /* Allow flexible sizing */
+    width: auto;
+    height: auto;
+    min-height: 11px;
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+.tab .text {
+    /* SP/Body: Bold */
+    font-family: 'ABC Diatype';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 18px;
+    /* or 120% */
+    display: flex;
+    align-items: center;
+    /* Black/900 */
+    color: #0D0D0D;
+    /* Allow natural text sizing */
+    width: auto;
+    height: auto;
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+.tab .edit-icon {
+    display: none;
+    width: 16px;
+    height: 16px;
+    /* Inside auto layout */
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+
+.tab .edit-icon .vector {
+    position: absolute;
+    left: 5.37%;
+    right: 5.34%;
+    top: 5.37%;
+    bottom: 5.34%;
+    /* Purple Support color */
+    background: #707EFA;
+}
+
+.tab .line {
+    width: 187px;
+    height: 0px;
+    border: 3px solid #000000;
+    /* Inside auto layout */
+    flex: none;
+    order: 1;
+    align-self: stretch;
+    flex-grow: 0;
+}

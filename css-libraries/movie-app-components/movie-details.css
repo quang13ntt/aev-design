@@ -1,0 +1,180 @@
+/* Movie Details and Information */
+
+/* Age rating */
+.age-rating {
+    /* Auto layout */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 2px 6px;
+    gap: 10px;
+    /* Blue support color */
+    background: #73E5EA;
+    border-radius: 4px;
+    /* Allow natural sizing */
+    width: fit-content;
+    height: auto;
+    min-width: 29px;
+    /* Inside auto layout */
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+
+/* Age rating number */
+.age-rating-number {
+    /* SP/Caption 1: Bold */
+    font-family: 'ABC Diatype';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 17px;
+    /* or 130% */
+    text-align: right;
+    color: #000000;
+    /* Allow natural text sizing */
+    width: auto;
+    height: auto;
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+/* Content container */
+.content-container {
+    /* Auto layout */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 16px;
+    /* Allow flexible sizing */
+    width: 100%;
+    max-width: 343px;
+    height: auto;
+    /* Inside auto layout */
+    flex: none;
+    order: 1;
+    align-self: stretch;
+    flex-grow: 0;
+}
+
+/* Top movies headline */
+.top-movies-headline {
+    /* SP/Caption 1: Regular */
+    font-family: 'ABC Diatype';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 17px;
+    /* or 130% */
+    /* Black/900 */
+    color: #0D0D0D;
+    /* Allow natural text flow */
+    width: 100%;
+    height: auto;
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 0;
+}
+
+/* Details container */
+.details-container {
+    /* Auto layout */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 14px;
+    /* Allow flexible sizing */
+    width: 100%;
+    max-width: 343px;
+    height: auto;
+    /* Inside auto layout */
+    flex: none;
+    order: 1;
+    align-self: stretch;
+    flex-grow: 0;
+}
+
+/* Details header */
+.details-header {
+    /* Auto layout */
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 12px;
+    /* Allow flexible sizing */
+    width: 100%;
+    height: auto;
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 0;
+}
+
+/* Details title */
+.details-title {
+    /* SP/Caption 1: Bold */
+    font-family: 'ABC Diatype';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 17px;
+    /* or 130% */
+    /* Black/900 */
+    color: #0D0D0D;
+    /* Allow natural text sizing */
+    width: auto;
+    height: auto;
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+/* Details subtitle */
+.details-subtitle {
+    /* SP/Caption 1: Regular */
+    font-family: 'ABC Diatype';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 17px;
+    /* or 130% */
+    /* Black/900 */
+    color: #0D0D0D;
+    /* Allow natural text sizing */
+    width: auto;
+    height: auto;
+    /* Inside auto layout */
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+
+/* Movie number indicator */
+.movie-number {
+    /* SP/Caption 1: Bold */
+    font-family: 'ABC Diatype';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 17px;
+    /* or 130% */
+    text-align: right;
+    color: #000000;
+    /* Allow natural text sizing */
+    width: auto;
+    height: auto;
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}

@@ -1,0 +1,108 @@
+/* Screen Types and Formats */
+
+/* screen */
+.screen-type {
+    /* Auto layout */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 6px;
+    gap: 10px;
+    /* Black/900 Main color */
+    background: #0D0D0D;
+    border-radius: 4px;
+    /* Allow flexible sizing */
+    width: fit-content;
+    height: auto;
+    min-width: 66px;
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+.screen-type.wide {
+    /* Allow wider variant to expand */
+    min-width: 167.5px;
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 1;
+}
+
+/* screen label */
+.screen-label {
+    /* SP/Caption 2: AA Bold */
+    font-family: 'ABC Diatype';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 11px;
+    line-height: 14px;
+    /* or 130% */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    text-transform: uppercase;
+    /* White */
+    color: #FFFFFF;
+    /* Allow natural text sizing */
+    width: auto;
+    height: auto;
+    min-width: 52px;
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+.screen-label.wide {
+    min-width: 54px;
+}
+
+/* 3D format indicator */
+.format-3d {
+    width: 13px;
+    height: 8px;
+    /* Black/900 Main color */
+    background: #0D0D0D;
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+/* IMAX format indicator */
+.format-imax {
+    /* Similar to 3D but different styling */
+    width: 13px;
+    height: 8px;
+    /* Black/900 Main color */
+    background: #0D0D0D;
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+/* Film format logo container */
+.film-format-logo {
+    /* Auto layout */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 2px;
+    gap: 12px;
+    margin: 0 auto;
+    /* Allow natural sizing for logos */
+    width: auto;
+    height: auto;
+    min-width: 17px;
+    min-height: 16px;
+    /* Inside auto layout */
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}

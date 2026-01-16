@@ -1,146 +1,176 @@
 ---
 name: wireframe-to-code-workflow
-description: Guide for transforming low-fidelity wireframes into production-ready UI code using a Design Knowledge Base. Use when users need to generate HTML/CSS previews from wireframes or convert previews to production code, ensuring consistency with existing design systems and preventing invented UI elements.
+description: Overview skill for the complete wireframe-to-code workflow. Use when you need guidance on the full process of converting wireframes into production code through three stages - building a Design Knowledge Base, generating HTML/CSS previews, and producing production-ready code. This skill provides navigation to three specialized sub-skills for each stage.
 ---
 
-# Wireframe to Code Workflow Skill
+# Wireframe to Code Workflow - Overview
 
-This skill provides a structured 3-stage workflow to convert low-fidelity wireframes into working UI implementations that align with the product's design system and frontend standards. It emphasizes using a Design Knowledge Base (DKB) to constrain outputs and avoid inventing new styles.
+This skill provides a high-level overview of the complete wireframe-to-code workflow and navigation to specialized sub-skills for each stage. The workflow ensures consistent, maintainable UI code by constraining all design decisions to a Design Knowledge Base (DKB).
 
-## When to Use This Skill
+## Workflow Overview
 
-- When transforming wireframes into reviewable HTML/CSS previews
-- When generating production code from approved previews
-- When building or maintaining a Design Knowledge Base for consistent UI generation
-- For any task requiring token-driven and component-driven UI development
+The wireframe-to-code workflow consists of three sequential stages:
 
-## Core Workflow
+1. **Build Design Knowledge Base** → Extract design system from existing pages
+2. **Generate Preview from Wireframe** → Create reviewable HTML/CSS from wireframes
+3. **Generate Production Code** → Convert approved previews to framework code
 
-The workflow consists of three stages:
+Each stage has a dedicated skill with detailed processes, tools, and references.
 
-1. **Build the Design Knowledge Base (DKB)**: Create a single source of truth for design decisions and implementation mappings.
-2. **Generate HTML/CSS Preview**: Convert wireframes into high-fidelity, reviewable previews using only DKB elements.
-3. **Generate Production Code**: Convert approved previews into implementation-ready code.
+## When to Use This Overview
 
-## Stage 1: Build the Design Knowledge Base (DKB)
+- You need to understand the complete workflow before starting
+- You're planning a wireframe-to-code project
+- You want to see how the three stages connect
+- You need to navigate to the appropriate stage-specific skill
 
-### Purpose
+## Core Principles
 
-Establish a versioned reference that captures existing design patterns, tokens, and constraints to ensure all generated UI is consistent and implementable.
+### Constrained Generation
+All UI generation is constrained by the Design Knowledge Base. No "invented" styles, colors, or components are allowed. This ensures:
+- Visual consistency with existing product
+- Maintainable code that follows patterns
+- Predictable behavior for designers and engineers
 
-### Inputs
+### Token-Driven Styling
+Every visual decision references a design token:
+- Colors → `color.primary`, `color.text.primary`
+- Spacing → `space.4`, `space.6`
+- Typography → `font.heading-lg`, `font.body-md`
+- Radius → `radius.md`, `radius.lg`
+- Shadows → `shadow.card`, `shadow.modal`
 
-- Screenshots of existing product pages (key flows, states, breakpoints)
-- Existing CSS (global styles, component styles, utilities)
-- Existing HTML (optional, for structure reference)
-- Design source files (Figma, etc., optional)
-- Brand/accessibility guidelines (optional)
+### Component-Driven Structure
+All UI elements map to components defined in the DKB:
+- Buttons → `Button[primary]`, `Button[secondary]`
+- Cards → `Card[elevated]`, `Card[flat]`
+- Inputs → `Input[default]`, `Input[error]`
 
-### Outputs
+### Progressive Refinement
+Each stage builds on the previous with increasing fidelity:
+- Stage 1: Extract patterns and constraints
+- Stage 2: Apply patterns to create high-fidelity preview
+- Stage 3: Convert preview to production-ready code
 
-- Design principles (hierarchy, spacing, layout, visual language)
-- Design tokens (colors, typography, spacing, radius, shadows, etc.)
-- Component catalog (purpose, variants, states, DOM structure)
-- CSS mappings (token-to-variable, component-to-classes)
-- Responsive/accessibility rules and constraints
+## Stage 1: Build Design Knowledge Base
 
-### Process
+**Purpose**: Create a single source of truth for design decisions and implementation mappings.
 
-1. Collect artifacts: Capture screens, archive CSS/HTML/assets.
-2. Extract tokens: Identify and normalize CSS variables to semantic roles.
-3. Build component catalog: Document each component's structure and states.
-4. Document rules: Layout, typography, interaction patterns.
-5. Publish: Store in version control with governance for updates.
+**When to use**: 
+- Starting a new design system documentation project
+- Analyzing existing products to extract patterns
+- Establishing implementation mappings for code generation
 
-### Quality Checks
+**Skill**: Use the `build-design-knowledge-base` skill
 
-- Core components documented with structure/states
-- Consistent spacing/typography scales captured
-- Naming matches production conventions
-- Sufficient detail for new page design without guesswork
+**Key outputs**:
+- Design principles and visual language
+- Design tokens (colors, typography, spacing, radius, shadows)
+- Component catalog with variants and states
+- CSS mappings (token → variables, component → classes)
+- Responsive and accessibility rules
+- Constraints and exceptions
+
+**Learn more**: See the [build-design-knowledge-base](../build-design-knowledge-base/SKILL.md) skill
 
 ## Stage 2: Generate HTML/CSS Preview from Wireframe
 
-### Purpose
+**Purpose**: Convert low-fidelity wireframes into high-fidelity, reviewable previews using only DKB elements.
 
-Transform low-fidelity wireframes into high-fidelity, browser-viewable previews using only DKB elements.
+**When to use**:
+- Converting wireframes into HTML/CSS mockups
+- Creating reviewable prototypes for stakeholder validation
+- Building proof-of-concept UIs with existing design systems
 
-### Inputs
+**Skill**: Use the `wireframe-to-preview` skill
 
-- Wireframe (image, Figma frame, or description)
-- DKB (tokens, components, rules, constraints)
-- Responsive/accessibility requirements
+**Prerequisites**: 
+- Completed Design Knowledge Base from Stage 1
+- Low-fidelity wireframe (image, Figma frame, or description)
 
-### Outputs
+**Key outputs**:
+- Browser-viewable HTML/CSS preview
+- Preview specification (components used, tokens applied)
+- Responsive and interaction states
 
-- Preview page (HTML/CSS) for browser viewing
-- Preview specification (components used, tokens applied, layout notes)
-
-### Process
-
-1. Interpret wireframe: Identify components, text roles, layout structure.
-2. Map to DKB: Select matching components/variants, resolve states.
-3. Apply tokens/rules: Bind styling to DKB elements, enforce constraints.
-4. Generate markup/styles: Use DKB classes/variables, avoid hard-coded values.
-5. Add responsiveness/interactions: Implement DKB-defined breakpoints and accessibility.
-
-### Quality Checks
-
-- All styling backed by tokens/components
-- Visually consistent with product
-- Usable for stakeholder review
+**Learn more**: See the [wireframe-to-preview](../wireframe-to-preview/SKILL.md) skill
 
 ## Stage 3: Generate Production Code from Preview
 
-### Purpose
+**Purpose**: Convert approved previews into production-ready code for specific technology stacks.
 
-Convert approved previews into maintainable, production-ready code while preserving DKB mappings.
+**When to use**:
+- Converting approved HTML/CSS previews into React/Vue/Angular components
+- Implementing production UI from validated designs
+- Integrating with specific frameworks and styling approaches
 
-### Inputs
+**Skill**: Use the `preview-to-code` skill
 
-- Approved HTML/CSS preview
-- DKB (mappings, rules)
-- Engineering constraints (framework, linting, tooling)
+**Prerequisites**:
+- Approved HTML/CSS preview from Stage 2
+- Design Knowledge Base from Stage 1
+- Defined technology stack (React, Vue, Tailwind, etc.)
 
-### Outputs
+**Key outputs**:
+- Production-ready components in chosen framework
+- Token artifacts (CSS variables, theme configs)
+- Accessible, responsive, performant code
 
-- Production UI implementation (HTML/CSS or framework components)
-- Token artifacts (if needed)
-- Optional release notes for changes
+**Supported stacks**:
+- React + TypeScript + CSS Modules/Tailwind/Styled Components
+- Vue 3 + TypeScript + Scoped CSS
+- Angular + TypeScript
+- Svelte
+- Plain HTML/CSS/JavaScript
 
-### Process
+**Learn more**: See the [preview-to-code](../preview-to-code/SKILL.md) skill
 
-1. Normalize structure: Use semantic HTML, add ARIA as needed.
-2. Bind styling: Replace hard-coded values with token references.
-3. Convert to target format: Extract components matching codebase patterns.
-4. Verify accessibility/responsiveness: Ensure focus, contrast, hit targets, breakpoints.
-5. Build/test: Compile and render without errors.
+## Workflow Examples
 
-### Quality Checks
+### Example 1: Building a New Feature from Scratch
 
-- No invented CSS values
-- Matches preview visually
-- Meets accessibility baselines
-- Integrates with existing conventions
+1. **Analyze existing pages** (Stage 1)
+   - Screenshot all relevant pages in your product
+   - Use `build-design-knowledge-base` skill to extract DKB
+   - Output: Complete DKB with tokens and components
 
-## Key Principles
+2. **Create preview from wireframe** (Stage 2)
+   - Designer provides wireframe for new feature
+   - Use `wireframe-to-preview` skill with DKB
+   - Output: HTML/CSS preview for stakeholder review
 
-- **Constrained Generation**: Only use elements from the DKB to prevent invented UI.
-- **Token-Driven Styling**: All visual decisions must reference design tokens.
-- **Component-Based**: Map wireframe elements to existing component variants.
-- **Progressive Refinement**: Each stage builds on the previous with increasing fidelity.
+3. **Generate React components** (Stage 3)
+   - After preview approval
+   - Use `preview-to-code` skill targeting React + Tailwind
+   - Output: Production React components with Tailwind classes
 
-## Terminology
+### Example 2: Converting Design System to Code
 
-- **Design Knowledge Base (DKB)**: Versioned reference combining design rules and implementation mappings.
-- **Tokens**: Named styling primitives (colors, typography, spacing, etc.).
-- **Preview**: Reviewable HTML/CSS artifact from wireframe using DKB.
-- **Wireframe**: Low-fidelity structural input (image, frame, or description).
+1. **Document existing design system** (Stage 1)
+   - Export Figma components and screenshots
+   - Use `build-design-knowledge-base` skill
+   - Output: DKB with comprehensive token set
 
-## References
+2. **Generate component library previews** (Stage 2)
+   - For each component in Figma
+   - Use `wireframe-to-preview` skill
+   - Output: HTML/CSS preview gallery
 
-For detailed guidance on each stage:
+3. **Build component library** (Stage 3)
+   - For approved previews
+   - Use `preview-to-code` skill targeting Vue 3
+   - Output: Vue component library with Storybook
 
-- **Stage 1 - Building DKB**: See [stage1-dkb.md](references/stage1-dkb.md) for comprehensive DKB creation process.
-- **Stage 2 - Generating Previews**: See [stage2-preview.md](references/stage2-preview.md) for wireframe-to-preview conversion details.
-- **Stage 3 - Production Code**: See [stage3-code.md](references/stage3-code.md) for preview-to-code implementation steps.
+## Key Terminology
+
+- **Design Knowledge Base (DKB)**: Versioned reference combining design rules and implementation mappings (tokens + components + patterns + constraints)
+- **Design Tokens**: Named, reusable styling primitives (colors, typography, spacing, radius, elevation)
+- **Component Mapping**: Agreed HTML structure and CSS classes for each component variant
+- **Preview**: Reviewable HTML/CSS artifact generated from wireframe using only DKB elements
+- **Wireframe**: Low-fidelity structural input (image, Figma frame, or description)
+
+## Navigation to Sub-Skills
+
+- **Stage 1**: [build-design-knowledge-base](../build-design-knowledge-base/SKILL.md)
+- **Stage 2**: [wireframe-to-preview](../wireframe-to-preview/SKILL.md)
+- **Stage 3**: [preview-to-code](../preview-to-code/SKILL.md)

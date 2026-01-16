@@ -144,7 +144,115 @@ Objectives:
 
 #### Quality Criteria
 
+- All primary UI components in the screenshots are identified and described.
+- A consistent spacing and typography scale has been hypothesized and documented.
+- The "Style Manifesto" is clear enough that a human designer could follow it to create a matching page.
+
 ### Build the Design Library
+
+Objectives:
+
+- Create a centralized, version-controlled Source of Truth that houses both foundational styles (Design Tokens) and structural building blocks (Component Manifest)
+- Construct a unified, structured Design Library that serves as the single source of truth for all visual styles, UI components, and implementation mappings.
+- This library ensures that all generated designs—human or AI—are visually consistent, technically feasible, and directly mappable to production code.
+
+#### Inputs
+
+- Extracted style rules from Step 1 (colors, typography, spacing, radii, shadows).
+- Extracted component inventory (buttons, cards, forms, navigation, etc.).
+- CSS files from existing production pages (global styles + component styles).
+- Asset Repository (SVG icons, images, fonts).
+- Existing design files (if available).
+- Brand guidelines.
+
+#### Outputs
+
+A complete Design Library consisting of:
+
+- Design Token Specification
+- Component Definitions & Variants
+- Token‑mapped CSS Variables & Classes
+- Implementation‑ready Component Code References
+- Usage Documentation
+
+This library is consumed by:
+
+- the AI agent (to generate consistent high‑fidelity designs),
+- frontend engineers (as code source), and
+- designers (as a reference for styling decisions).
+
+#### Process
+
+1. Establish Design Tokens (Foundational Style Layer): Design Tokens represent the smallest units of reusable style. They define what the design looks like in a structured, technology‑agnostic form.
+   - Color Tokens
+     - Brand colors (primary, secondary)
+     - Semantic colors (success, warning, error)
+     - Surface/background colors
+     - Text colors
+     - Border colors
+     - State colors (hover, active, disabled)
+   - Typography Tokens
+     - Font families
+     - Font sizes
+     - Font weights
+     - Line heights
+     - Letter spacing
+     - Heading and body type scales
+   - Spacing & Sizing Tokens
+     - Spacing scale (e.g., 4, 8, 12, 16…)
+     - Section spacing
+     - Component padding presets
+     - Width/height scales (if standardized)
+   - Border & Radius Tokens
+     - Radii (sm, md, lg)
+     - Border width and border styles
+   - Shadow & Elevation Tokens
+     - Card elevation
+     - Modal elevation
+     - Tooltip elevation
+   - Motion Tokens (Optional)
+     - Transition durations
+     - Easing curves
+
+2. Build the Component Library (UI Component Layer): Next, define reusable UI components built on top of design tokens.
+   - Component Catalog
+     - Buttons
+     - Inputs (text field, dropdown, checkbox, radio)
+     - Cards
+     - Navigation (tabs, navbar, sidebar)
+     - Tables and list components
+     - Alerts, badges, chips
+     - Modals, drawers
+   - Component Structure
+     - Visual Specification: Layout structure, Color usage, Typography, Spacing, Radius & shadows, States (hover, focus, active, disabled)
+     - Functional Specification: Interactive behavior, Accessibility requirements, Responsiveness
+     - Variants: Button (primary, secondary, ghost), Card (elevated, flat, outlined), Input (default, error, disabled)
+     - Token bindings: Each component must reference token definitions
+   - Component JSON Definition (for AI consumption)
+
+3. Library Indexing: Create a "Component Catalog" for the AI.
+   - This is a text-based description of every component in the library, including its CSS class names and expected HTML structure.
+
+4. Build Reference Documentation (Human & AI Readable): Document the Design Library so that both humans and AI agents understand it
+   - Token reference sheet
+   - Component catalog with diagrams
+   - CSS class reference
+   - Usage guidelines
+   - Interaction guidelines
+   - Accessibility requirements
+   - Responsive rules and breakpoints
+   - Formats:
+     - Markdown documentation (for repository)
+     - JSON schemas (for AI)
+     - Visual documentation (for designers)
+
+5. Versioning & Governance: To support long‑term stability
+
+#### Quality Criteria
+
+- All CSS variables from the production site are mapped to a JSON token.
+- The library includes all core components required to reconstruct a basic page (Nav, Button, Input, Card).
+- The naming convention in the JSON matches the naming convention in the production code 1:1.
 
 ### Generate High‑Fidelity Designs from Wireframes
 

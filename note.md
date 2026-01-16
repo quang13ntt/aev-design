@@ -256,7 +256,139 @@ This library is consumed by:
 
 ### Generate High‑Fidelity Designs from Wireframes
 
+Objectives:
+
+- Transform a low‑fidelity wireframe into a high‑fidelity, production‑ready design that fully adheres to the product’s Design Knowledge Base (DKB) and Design Library (DL).
+- This step combines layout interpretation, component matching, design token application, and visual refinement to produce a consistent, fully styled UI.
+- Transform a low-fidelity (lo-fi) structural input into a pixel-accurate, high-fidelity (hi-fi) mockup. The system must interpret the intent of the wireframe and "skin" it using the established Design Library and Knowledge Base.
+
+#### Inputs
+
+- Low‑fidelity wireframe (Figma frame, image, or structured UI JSON).
+- Design Knowledge Base (design principles, rules, patterns).
+- Design Library (design tokens, component definitions, CSS mappings).
+- Associated constraints (brand guides, accessibility rules, responsive breakpoints).
+
+#### Outputs
+
+- One or more high‑fidelity design variants, visually consistent with existing product screens.
+- A structured design specification (tokens used, components used, layout metrics).
+- (Optional) A machine‑readable representation for code generation.
+
+#### Process
+
+1. Parse and Interpret the Wireframe: understand the structure and intent of the wireframe.
+   - Component Detection: Identify each UI element in the wireframe, e.g., Buttons, Text elements, (headings, body text, labels), Form inputs, Cards, Lists and tables, Navigation elements
+   - Layout Extraction: Extract structure and output a normalized wireframe structure model, e.g., Hierarchical grouping, Spacing and alignment hints, Grid or flex-direction inference, Relative positioning
+
+2. Map Wireframe Elements to the Design Library: Each detected element must be mapped to a corresponding component definition in the Design Library
+   - Component Matching: Use semantic rules from the DKB to determine component type
+   - Variant Selection: Identify which component variant best matches
+   - Token Assignment: Assign the appropriate design tokens for
+     - Color roles (background, text, border)
+     - Typography (heading size, body size, weight)
+     - Spacing (padding/margin via token scale)
+     - Radius / shadows
+     - Surface elevation
+
+3. Apply Design Tokens and Visual Rules: Use the formal design rules captured during analysis to style the layout
+   - Color System Application: Apply semantic colors from tokens
+   - Typography Rules: Correct hierarchy (H1 → body text scale), Line height and letter spacing, Semantic typography tokens (e.g., {font.heading-xl})
+   - Spacing & Layout Rules: Use spacing/tokens for Component padding, Section spacing, Grid gutters, Element grouping
+   - Component Styling: Apply Radius tokens, Elevation/shadow tokens, State styles (hover, focus, disabled)
+   - Interaction & Responsiveness: Include responsive constraints and interaction markers where applicable such as Layout shifts on different breakpoints, Interactive affordances (click targets, hover areas)
+
+4. Apply Layout & Composition Principles: Use the DKB layout rules to ensure visual quality and consistency.
+   - Visual Hierarchy: ensure Primary actions stand out, Headings/subheadings hierarchy is consistent, Groupings follow proximity rules
+   - Alignment & Composition: enforce Grid alignment, Consistent left/right padding, Balanced white space
+   - Accessibility Enforcement: Apply accessibility standards such as Minimum contrast ratios, Touch target sizes, Readable typography, Logical tab order markers (optional in design)
+
+5. Generate Design Variants: Optionally, generate multiple design variants to explore different visual treatments while adhering to the same structural and design rules. Adding more units but keep the design consistent.
+
+6. Finalize the High‑Fidelity Output: The system produces a production-ready design
+   - High-fidelity UI mockups
+   - Design Specification Package
+     - Component list
+     - Token usage table
+     - Style references
+     - Measurements (padding, margin, spacing)
+     - Interaction notes
+   - Machine-readable representation
+
+#### Quality Criteria
+
+- The output is indistinguishable in style from the existing pages analyzed in Phase 1.
+- Every visual element in the mockup corresponds to an existing token or component in the Design Library.
+- The layout logic (grids, margins) respects the product's established spatial system.
+
 ### Generate Code Using the Design Library
+
+Objectives:
+
+- Convert the approved high‑fidelity design into implementation‑ready code (HTML/CSS and/or framework components) by referencing the Design Library (DL) and Design Knowledge Base (DKB).
+- Programmatically translate the finalized high-fidelity design into production-ready frontend code. By referencing the standardized Design Library (Phase 2), the system ensures the output is maintainable, performant, and perfectly aligned with the existing codebase.
+
+#### Inputs
+
+- Final high‑fidelity design (Figma file/frames and/or machine‑readable layout JSON).
+- Design Library (Design Tokens, Component Library, CSS Mapping Layer, documentation).
+- Design Knowledge Base (design principles, patterns, accessibility rules, responsive breakpoints).
+- Engineering constraints (target frameworks, build tooling, linting rules, performance budgets).
+
+#### Outputs
+
+- Implementation-ready UI:
+  - HTML/CSS (or framework templates) referencing design tokens and component classes.
+  - Optional: Framework components (React/Vue/Angular/Svelte/Flutter) wired to the same tokens.
+- Generated assets: token bundles (CSS variables), theme files, and component styles.
+- Build artifacts: minified CSS/JS, sourcemaps, and any generated docs.
+- Release notes (SemVer), including token and component mapping diffs.
+
+#### Process
+
+1. Normalize the Design Specification
+   - Extract component tree from the high‑fidelity design (by reading Figma nodes or the layout JSON).
+   - Resolve component types/variants using the Component Library (e.g., Button[primary], Card[outlined]).
+   - Resolve token bindings (colors, typography, spacing, radii, shadows) used by each component instance.
+   - Capture responsive behavior (breakpoints, density, conditional visibility) and interaction states (hover, focus, active, disabled) per component instance.
+
+2. Generate Token Artifacts:
+   - Create the token outputs that the runtime will consume.
+   - Ensure token names exactly match the Design Library.
+   - Token files must be versioned and consumable by both build tooling and documentation.
+
+3. Assemble Component Markup
+   - Map each design instance to implementation markup and classes.
+
+4. Bind Styles to Tokens (CSS Mapping Layer)
+   - Reference tokens through CSS variables or utility classes.
+   - All hardcoded values should be replaced by token references. If a value cannot be mapped, add a token candidate and route it through governance.
+
+5. Theming and Density
+   - Generate theme and density variants by switching token modes and reusing the same markup.
+   - No component CSS duplication; variants flow from token changes.
+
+6. Accessibility & Semantics: Enforce the accessibility constraints defined in the DKB
+   - Semantic markup: use <button>, <nav>, <header>, <main>, <section>, <label> appropriately.
+   - ARIA where necessary: aria-expanded, aria-controls, role="dialog".
+   - Focus management: visible focus ring; logical tab order.
+   - Contrast checks: ensure tokenized color pairs meet WCAG ratios.
+   - Hit targets: adhere to minimum size (e.g., 44×44 px).
+
+7. Responsiveness: Implement the breakpoint strategy from the DKB
+   - Keep spacing and typographic scales tokenized; do not hardcode responsive values outside token scope unless explicitly approved.
+
+8. Asset Pipeline
+   - Export optimized SVG icons and images (with responsive sizes).
+   - Tokenize icon sizes and stroke weights if standardized.
+   - Generate font-face declarations using the typography tokens and performance budgets (preload where appropriate).
+
+#### Quality Criteria
+
+- The code compiles without errors in the existing product environment.
+- Zero "hallucinated" CSS values; 100% of styles are derived from Design Tokens.
+- The generated UI matches the Phase 3 mockup with 1:1 visual parity.
+- The code passes a basic accessibility check (e.g., contrast ratios, alt tags).
 
 ### Just note
 
